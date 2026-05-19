@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>明星来电</title>
+ 
+  <!-- 固定界面 -->
+  <script>
+    document.addEventListener('mousewheel', function (e) {
+      e = e || window.event;
+      if ((e.wheelDelta && event.ctrlKey) || e.detail) {
+        event.preventDefault();
+      }
+    }, {
+      capture: false,
+      passive: false
+    })
+    
+  </script>
+  <!-- 一键登录 -->
+  <meta name="referrer" content="always">
+  <script type="text/javascript" src="https://www.cmpassport.com/NumberAbility/jssdk/jssdk.min.js"></script>
+  <!-- 中国移动插码 -->
+    <!-- <script type="text/javascript" src="https://assets.giocdn.com/sdk/cdp/gio.js"></script> -->
+    <!-- <script type='text/javascript'> 
+      (function(window, document, script, src, namespace) {
+        window[namespace] = window[namespace] || function() {
+          (window[namespace].q = window[namespace].q || []).push(arguments)
+        };
+        script = document.createElement('script');
+        let tag = document.getElementsByTagName('script')[0];
+        script.async = true;
+        script.src = src;
+        tag.parentNode.insertBefore(script, tag);
+      })(window, document, 'script', 'https://assets.giocdn.com/sdk/cdp/gio.js', 'gdp');
+      console.log( window.location );
+      if(window.location.hostname=='fstest.hekouxin.com' || window.location.hostname=='127.0.0.1'){
+        console.log('我是测试环境和开发环境');
+     gdp('init', '99cc1de0c05764e5', 'bddc2ac92369174e',{
+      host: 'uatcollect.gmcc.net',
+      compress: true, // 开启数据压缩模式。
+      debug: true // 开启测试模式，控制台可看到数据，生产环境请勿添加此参数。
+    });  
+      }else{
+        console.log('我是生产环境');
+        gdp('init', '8d2279a5e2f18b7c', '9d59ac736f01c688',{
+      host: 'collect.gmcc.net', // 数据发送地址。
+      compress: true, // 开启数据压缩模式。
+      debug: false // 开启测试模式，控制台可看到数据，生产环境请勿添加此参数。
+    });  
+      }
+      gdp('send');
+    
+     
+    </script> -->
+  <!-- 微信分享   -->
+  <script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <script type="text/javascript" src="https://res.app.coc.10086.cn/appother/js/public/cmcc.js"></script>
+ 
+  <script>
+    var url = document.location.href;
+    var _hmt = _hmt || [];
+
+    if (url.indexOf('yyxx.10086.cn') > 0) {
+      (function() {
+        var hm = document.createElement('script');
+        hm.src = '//hm.baidu.com/hm.js?d3bccd64e8d80ab8ac93cf79c266c9f6';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    } else if (url.indexOf('v.mail.10086.cn') > 0) {
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement('script');
+        hm.src = '//hm.baidu.com/hm.js?1e02e0e32d00333b59aeafb159e2b679';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    } else if (url.indexOf('wx.hekouxin.com') > 0) {
+      (function() {
+        var hm = document.createElement('script');
+        hm.src = '//hm.baidu.com/hm.js?fcf92271e22a748b35c2fa991e97404b';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    }
+    
+  </script>
+  <!-- 限制微信 -->
+  <!-- <script>
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        // 以下代码是用javascript强行关闭当前页面
+        // alert("已禁止本次访问：您必须使用微信内置浏览器访问本页面！");
+        window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=888"
+    }
+  </script> -->
+  <script>
+    (function (win, export_obj) {
+      win['LogAnalyticsObject'] = export_obj
+      if (!win[export_obj]) {
+        var _collect = function () {
+          _collect.q.push(arguments)
+        }
+        _collect.q = _collect.q || []
+        win[export_obj] = _collect
+      }
+      win[export_obj].l = +new Date()
+    })(window, 'collectEvent')
+  </script>
+  <script async src="//lf3-data.volccdn.com/obj/data-static/log-sdk/collect/5.0/collect-privity-v5.1.12.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+ <!-- 打开移动端调试工具 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script> -->
+      <!-- 方法二 -->
+    <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+      // VConsole 默认会挂载到 `window.VConsole` 上
+      var vConsole = new window.VConsole();
+    </script> -->
+
+    
+</body>
+<style>
+  
+</style>
+</html>
